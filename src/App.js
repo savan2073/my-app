@@ -1,10 +1,16 @@
 import './App.css';
+//import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+//import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <span className='header'>Movie Database</span>
-    </div>
+    <>
+      
+      <div className="App">
+        <Home/>
+      </div>
+    </>
   );
 }
 

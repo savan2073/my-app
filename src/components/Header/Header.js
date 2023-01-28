@@ -1,9 +1,7 @@
-const Header = () => {
-    return(
-        <div>
+import "./Header.css";
 
-        </div>
-    )
-}
+const Header = () => {
+    return <span className='header'>Movie Database</span>;
+};
 
 export default Header
