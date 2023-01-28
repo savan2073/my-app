@@ -10,8 +10,8 @@ import Search from './Pages/Search/Search';
 
 function App() {
   return (
-    <BrowserRouter>
-    <Navbar/>
+    <div>
+      <Navbar/>
       <div className="App">
         <Container>
             <Routes>
@@ -23,7 +23,7 @@ function App() {
             </Routes>
         </Container>
       </div>
-    </BrowserRouter>
+      </div>
   );
 }
 
