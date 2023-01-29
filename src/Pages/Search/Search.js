@@ -1,20 +1,20 @@
-//import {Button,Tab,Tabs,TextField,} from "@material-ui/core";
-  import { useEffect, useState } from "react";
-  import axios from "axios";
-  import CustomPage from "../../components/Page/CustomPage";
-  import SingleContent from "../../components/SingleContent/SingleContent";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import CustomPage from "../../components/Page/CustomPage";
+import SingleContent from "../../components/SingleContent/SingleContent";
 import { Button, Tab, Tabs, TextField } from "@mui/material";
+import "./Search.css"
+
+const Search = () => {
+const [type, setType] = useState(0);
+const [searchText, setSearchText] = useState("");
+const [page, setPage] = useState(1);
+const [content, setContent] = useState([]);
+const [numOfPages, setNumOfPages] = useState();
   
-  const Search = () => {
-    const [type, setType] = useState(0);
-    const [searchText, setSearchText] = useState("");
-    const [page, setPage] = useState(1);
-    const [content, setContent] = useState([]);
-    const [numOfPages, setNumOfPages] = useState();
   
-  
-    const fetchSearch = async () => {
-      try {
+const fetchSearch = async () => {
+    try {
         const { data } = await axios.get(
           `https://api.themoviedb.org/3/search/${type ? "tv" : "movie"}?api_key=${
             process.env.REACT_APP_API_KEY
@@ -23,10 +23,10 @@ import { Button, Tab, Tabs, TextField } from "@mui/material";
         setContent(data.results);
         setNumOfPages(data.total_pages);
         // console.log(data);
-      } catch (error) {
+    } catch (error) {
         console.error(error);
-      }
-    };
+    }
+};
   
     useEffect(() => {
       window.scroll(0, 0);
@@ -36,7 +36,7 @@ import { Button, Tab, Tabs, TextField } from "@mui/material";
     return (
       <div>
         <span className="pageTitle">Search</span>
-          <div style={{display: "flex", margin:"15 px 0"}}>
+          <div className="search">
             <TextField
               style={{ flex: 1 }}
               className="searchBox"
@@ -54,8 +54,8 @@ import { Button, Tab, Tabs, TextField } from "@mui/material";
           </div>
           <Tabs
             value={type}
-            indicatorColor="primary"
-            textColor="primary"
+            indicatorColor="secondary"
+            textColor="secondary"
             onChange={(event, newValue) => {
               setType(newValue);
               setPage(1);
