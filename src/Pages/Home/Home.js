@@ -1,9 +1,9 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import "./Home.css"
-import "../SingleContent/SingleContent"
-import SingleContent from "../SingleContent/SingleContent"
-import CustomPage from "../Page/CustomPage"
+import "../../components/SingleContent/SingleContent"
+import SingleContent from "../../components/SingleContent/SingleContent"
+import CustomPage from "../../components/Page/CustomPage"
 
 const Home = () => {
 
