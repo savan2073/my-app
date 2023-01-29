@@ -13,7 +13,6 @@ const Navbar = () => {
                     <span><Link to ={"/"}>Homepage</Link></span>
                     <span><Link to={"/series"}>Series</Link></span>
                     <span><Link to={"/movies"}>Movies</Link></span>
-                    <span><Link to={"/top_100"}>Top 100</Link></span>
                 </div>
                 <div className="right">
                     <Link to={"/search"}><Search className="icon"></Search></Link>
