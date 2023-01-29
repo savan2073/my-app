@@ -3,14 +3,16 @@ import { useEffect, useState } from "react"
 import "./Home.css"
 import "../SingleContent/SingleContent"
 import SingleContent from "../SingleContent/SingleContent"
+import CustomPage from "../Page/CustomPage"
 
 const Home = () => {
 
+    const [page, setPage] = useState(1)
     const [content, setContent] = useState([]);
 
     const fetchTrending = async () => {
         const { data } = await axios.get(
-          `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}`
+          `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`
         );
     
         console.log(data);
@@ -21,10 +23,11 @@ const Home = () => {
 
       useEffect(() => {
         fetchTrending();
-    }, [])
+    }, [page])
 
     return(
         <div className='home'>
+            <span className="pageTitle">Trending Now</span>
             <div className="trending">
                 {
                     content && content.map((c) =>(
@@ -40,6 +43,7 @@ const Home = () => {
                     ))
                 }
             </div>
+            <CustomPage setPage={setPage}/>
         </div>
     )
 }

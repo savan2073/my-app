@@ -5,7 +5,7 @@
     width: 100%;
     top: 0;
     z-index: 999;
-    background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.4) 50%);
+    background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.842) 0%);
 }
 
 .container{

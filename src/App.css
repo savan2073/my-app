@@ -1,4 +1,16 @@
 .App{
     width: 100%;
-    background-color: rgb(9, 10, 10);
+    background-color: rgb(34, 146, 146);
+}
+
+.pageTitle{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 6vw;
+    padding: 4px;
+    border-radius: 50px;
+    color: #4d5564;
+    margin-top: 70px;
 }

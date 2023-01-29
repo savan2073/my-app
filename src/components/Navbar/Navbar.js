@@ -1,4 +1,4 @@
-import { AccountBox, Notifications, Search, SearchOff, SearchOutlined } from "@mui/icons-material"
+import { AccountBox, Notifications, Search } from "@mui/icons-material"
 import { Link } from "react-router-dom"
 import "./Navbar.css"
 
