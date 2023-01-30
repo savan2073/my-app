@@ -16,6 +16,11 @@
     padding: 0px 50px;
 }
 
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+
 .left{
     display: flex;
     align-items: center;
